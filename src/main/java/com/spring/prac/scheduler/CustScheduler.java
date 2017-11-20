@@ -1,7 +1,7 @@
 package com.spring.prac.scheduler;
 
 import com.spring.prac.Application;
-import com.spring.prac.model.Customer;
+import com.spring.prac.entity.Customer;
 import com.spring.prac.repository.CustomerRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
