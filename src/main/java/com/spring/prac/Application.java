@@ -45,6 +45,17 @@ public class Application {
             customerList.forEach(customer1 -> logger.info(customer1.toString()));
 
 
+            logger.info("fetch customer by last name and first name");
+            List<Customer> customers= customerRepository.findByLastNameAndFirstName("last2","firsr2");
+            customers.forEach(customer2 -> logger.info(customer2.toString()));
+
+
+            logger.info("fetch customer by last name or first name");
+             customers= customerRepository.findByLastNameOrFirstName("last2","firsr2");
+            customers.forEach(customer2 -> logger.info(customer2.toString()));
+
+
+
         };
     }
 }
