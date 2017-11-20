@@ -8,10 +8,12 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 import java.util.List;
 
 @SpringBootApplication
+@EnableScheduling
 public class Application {
 
     public static final Logger logger = LoggerFactory.getLogger(Application.class);
@@ -24,11 +26,13 @@ public class Application {
     @Bean
     public CommandLineRunner test(CustomerRepository customerRepository){
         return (args)->{
+            logger.info("Adding all customer");
 
             customerRepository.save(new Customer("firsr1","last1"));
             customerRepository.save(new Customer("firsr2","last2"));
             customerRepository.save(new Customer("firsr3","last3"));
             customerRepository.save(new Customer("firsr4","last4"));
+/*
 
             //fetch all customer
             logger.info("fetch all customer");
@@ -54,6 +58,7 @@ public class Application {
              customers= customerRepository.findByLastNameOrFirstName("last2","firsr2");
             customers.forEach(customer2 -> logger.info(customer2.toString()));
 
+*/
 
 
         };
