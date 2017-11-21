@@ -1,9 +1,12 @@
 com/spring/prac/security/CustomBasicAuthenticationEntryPoint.class
-com/spring/prac/scheduler/CustScheduler.class
+com/spring/prac/repository/UserRepository.class
 com/spring/prac/security/SecurityConfiguration.class
 com/spring/prac/service/CustomerService.class
-com/spring/prac/model/Customer.class
 com/spring/prac/controller/CustomerController.class
+com/spring/prac/entity/User.class
 com/spring/prac/repository/CustomerRepository.class
+com/spring/prac/controller/UserController.class
+com/spring/prac/scheduler/CustScheduler.class
+com/spring/prac/model/Customer.class
 com/spring/prac/Application.class
 com/spring/prac/entity/Customer.class

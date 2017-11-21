@@ -24,6 +24,8 @@ public class SecurityConfiguration  extends WebSecurityConfigurerAdapter{
 
         authenticationManagerBuilder.inMemoryAuthentication().withUser("akhi").password("akhi123").roles("ADMIN");
         authenticationManagerBuilder.inMemoryAuthentication().withUser("kuku").password("kuku123").roles("USER");
+
+
     }
 
     @Override

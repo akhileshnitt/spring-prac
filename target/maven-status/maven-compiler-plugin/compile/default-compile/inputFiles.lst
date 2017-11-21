@@ -1,3 +1,4 @@
+/Users/z002x5k/IdeaProjects/spring-prac/src/main/java/com/spring/prac/security/CustomBasicAuthenticationEntryPoint.java
 /Users/z002x5k/IdeaProjects/spring-prac/src/main/java/com/spring/prac/security/SecurityConfiguration.java
 /Users/z002x5k/IdeaProjects/spring-prac/src/main/java/com/spring/prac/controller/CustomerController.java
 /Users/z002x5k/IdeaProjects/spring-prac/src/main/java/com/spring/prac/model/Customer.java
@@ -5,4 +6,7 @@
 /Users/z002x5k/IdeaProjects/spring-prac/src/main/java/com/spring/prac/repository/CustomerRepository.java
 /Users/z002x5k/IdeaProjects/spring-prac/src/main/java/com/spring/prac/entity/Customer.java
 /Users/z002x5k/IdeaProjects/spring-prac/src/main/java/com/spring/prac/scheduler/CustScheduler.java
+/Users/z002x5k/IdeaProjects/spring-prac/src/main/java/com/spring/prac/controller/UserController.java
 /Users/z002x5k/IdeaProjects/spring-prac/src/main/java/com/spring/prac/Application.java
+/Users/z002x5k/IdeaProjects/spring-prac/src/main/java/com/spring/prac/entity/User.java
+/Users/z002x5k/IdeaProjects/spring-prac/src/main/java/com/spring/prac/repository/UserRepository.java
