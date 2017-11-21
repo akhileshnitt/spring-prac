@@ -26,4 +26,10 @@ public class CustomerService {
         return  modelCustomer;
 
     }
+
+    public com.spring.prac.model.Customer findCustomer(String id) {
+
+       Customer customer = customerRepository.findOne(Long.valueOf(id));
+       return new com.spring.prac.model.Customer(customer.getId(),customer.getFirstName(),customer.getLastName());
+    }
 }

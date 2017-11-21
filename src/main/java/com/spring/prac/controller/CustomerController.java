@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping("/api")
 public class CustomerController {
 
 
@@ -27,6 +28,15 @@ public class CustomerController {
 
      //   System.out.println();
         return  customerService.fetchAllCustomer();
+    }
+
+
+    @GetMapping("/customers/{id}")
+    public Customer allCustomer(@PathVariable("id") String id){
+       // logger.info("inside CustomerController");
+
+        //   System.out.println();
+        return  customerService.findCustomer(id);
     }
 
 

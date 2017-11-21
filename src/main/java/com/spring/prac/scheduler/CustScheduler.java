@@ -10,6 +10,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 @Component
@@ -19,6 +21,14 @@ public class CustScheduler {
 
     @Autowired
     CustomerRepository customerRepository;
+
+    private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
+
+
+    @Scheduled(fixedRate = 50000)
+    public void reportCurrentTime() {
+        logger.info("The time is now {}", dateFormat.format(new Date()));
+    }
 
     @Scheduled(cron = "${db.schedule}")
     public void dbSchedule(){
