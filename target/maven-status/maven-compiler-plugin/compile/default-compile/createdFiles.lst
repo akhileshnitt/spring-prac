@@ -1,3 +1,4 @@
+com/spring/prac/config/SwaggerConfig.class
 com/spring/prac/security/CustomBasicAuthenticationEntryPoint.class
 com/spring/prac/repository/UserRepository.class
 com/spring/prac/security/SecurityConfiguration.class

@@ -2,6 +2,8 @@ package com.spring.prac.controller;
 
 import com.spring.prac.entity.User;
 import com.spring.prac.repository.UserRepository;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +13,7 @@ import java.util.Iterator;
 
 @RestController
 @RequestMapping("/api/users")
+@Api(value="userservice", description="Operations pertaining to Users")
 public class UserController {
 
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
@@ -19,6 +22,7 @@ public class UserController {
     @Autowired
     UserRepository userRepository;
 
+    @ApiOperation(value = "Register new User")
     @PostMapping("/add")
     public String addNewUser(@RequestParam String firstName,@RequestParam String lastName,@RequestParam String email){
 
@@ -30,6 +34,7 @@ public class UserController {
         return "New User Saved";
     }
 
+    @ApiOperation(value = "View a list of available users", response = Iterable.class)
     @GetMapping("/all")
     public @ResponseBody Iterable<User> getAllUsers() {
         // This returns a JSON or XML with the users
